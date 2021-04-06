@@ -35,7 +35,7 @@ public class Controller {
 			player.setUsername("Anonymus");
 
 		} else if (playerS.findByUsername(player.getUsername()).size() > 0) {
-			player.setUsername(player.getUsername() + " already exists.Please choose another.");
+			player.setUsername(player.getUsername() + " already exists. Please choose another.");
 			player.setPassword("*******");
 
 			return new ResponseEntity<>(PlayerDto.playerToJson(player), HttpStatus.CONFLICT);
@@ -53,7 +53,7 @@ public class Controller {
 			editedPlayer = playerS.findPlayerById(id);
 			editedPlayer.setUsername(player.getUsername());
 		} catch (Exception e) {
-			System.out.println("That id is not in our database");
+			System.out.println("ID not found.");
 			e.printStackTrace();
 		}
 		return new ResponseEntity<>(this.addPlayer(editedPlayer).getBody(), HttpStatus.OK);
@@ -64,7 +64,6 @@ public class Controller {
 			Player playerById = playerS.findPlayerById(id);
 		return new ResponseEntity<>(DiceDto.diceToJson(diceS.rollDicesById(id)), HttpStatus.OK);
 	}
-	
 	
 	@DeleteMapping("/players/{id}/games")
 	@PreAuthorize("hasAuthority('player:admin')")
@@ -135,5 +134,4 @@ public class Controller {
 		List<PlayerDto> orderedPlayers = PlayerDto.sortBySuccesRate(this.showPlayers().getBody());
 		return new ResponseEntity<>(orderedPlayers.get(orderedPlayers.size() - 1), HttpStatus.OK);
 	}
-
 }

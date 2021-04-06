@@ -13,5 +13,4 @@ public enum DiceGamePermission {
 	public String getPermission() {
 		return permission;
 	}
-
 }

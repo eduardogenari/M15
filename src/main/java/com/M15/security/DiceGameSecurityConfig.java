@@ -2,6 +2,7 @@ package com.M15.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -13,9 +14,6 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
-
-
-
 
 @Configuration
 @EnableWebSecurity
@@ -51,6 +49,4 @@ public class DiceGameSecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(AuthenticationManagerBuilder amb) throws Exception {
 		amb.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
 	}
-	
-
 }

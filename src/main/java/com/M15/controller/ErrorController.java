@@ -22,29 +22,28 @@ public class ErrorController extends DefaultResponseErrorHandler {
 	@ExceptionHandler({AccessControlException.class, AccessDeniedException.class })
 	@ResponseBody
 	public ResponseEntity<StringDto> requestForbidden() {
-		return new ResponseEntity<>(StringDto.stringToJson("Sorry,you don't have the required permissions for this section."), HttpStatus.FORBIDDEN);
+		return new ResponseEntity<>(StringDto.stringToJson("Sorry, you don't have permissions for this section."), HttpStatus.FORBIDDEN);
 
 	}
 
 	@ExceptionHandler({ ServletException.class, NoSuchElementException.class })
 	@ResponseBody
 	public ResponseEntity<StringDto> requestNotFound() {
-		return new ResponseEntity<>(StringDto.stringToJson("That id is not in our database."), HttpStatus.NOT_FOUND);
+		return new ResponseEntity<>(StringDto.stringToJson("Sorry, ID not found."), HttpStatus.NOT_FOUND);
 	}
 
 	@ExceptionHandler({ HttpMessageNotReadableException.class, MethodArgumentTypeMismatchException.class })
 	@ResponseBody
 	public ResponseEntity<StringDto> invalidRequest() {
 		return new ResponseEntity<>(
-				StringDto.stringToJson("Please check if the id is a number or the other paramethers are ok."),
+				StringDto.stringToJson("Please check ID or other paramethers."),
 				HttpStatus.BAD_REQUEST);
 	}
 
 	@ExceptionHandler({ EmptyResultDataAccessException.class, NullPointerException.class })
 	@ResponseBody
 	public ResponseEntity<StringDto> cantFound() {
-		return new ResponseEntity<>(StringDto.stringToJson("Sorry,we can't find that player"),
+		return new ResponseEntity<>(StringDto.stringToJson("Sorry, player not found."),
 				HttpStatus.INTERNAL_SERVER_ERROR);
 	}
-	
 }

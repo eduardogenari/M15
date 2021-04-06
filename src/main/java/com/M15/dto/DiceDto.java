@@ -75,5 +75,4 @@ public class DiceDto {
 	public void setPlayer(String player) {
 		this.player = player;
 	}
-
 }

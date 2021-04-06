@@ -1,10 +1,10 @@
-package com.bcnit14;
+package M15;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class M14TheGameApplicationTests {
+class M15ApplicationTests {
 
 	@Test
 	void contextLoads() {

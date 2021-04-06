@@ -25,7 +25,6 @@ public class DiceServicesImpl implements IDiceService {
 		return iDiceDao.save(new Dice(playerId));
 	}
 
-
 	@Override
 	public List<Dice> findAllDices() {
 		return iDiceDao.findAll();
@@ -34,7 +33,6 @@ public class DiceServicesImpl implements IDiceService {
 	@Override
 	public void deleteById(String id) {
 		iDiceDao.deleteById(id);
-		
 	}
 
 	@Override
@@ -42,6 +40,4 @@ public class DiceServicesImpl implements IDiceService {
 		List<Dice> dicesByPlayerId = iDiceDao.findAll().stream().filter(d->d.getPlayer().equals(playerId)).collect(Collectors.toList());
 		return dicesByPlayerId;
 	}
-
-
 }

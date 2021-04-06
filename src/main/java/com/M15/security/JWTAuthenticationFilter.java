@@ -51,5 +51,4 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 				.setExpiration(new Date(System.currentTimeMillis() + 864_000_000)).compact();
 		response.addHeader("Authorization", "Bearer " + token);
 	}
-
 }

@@ -86,5 +86,4 @@ public class Dice {
 	public void setPlayer(String playerId) {
 		this.playerId = playerId;
 	}
-
 }

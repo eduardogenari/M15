@@ -65,7 +65,6 @@ public class PlayerServicesImpl implements UserDetailsService,IPlayerService {
 	@Override
 	public void deletePlayer(String id) throws Exception{
 		iPlayerDao.delete(iPlayerDao.findById(id).get());
-
 	}
 
 	@Override
