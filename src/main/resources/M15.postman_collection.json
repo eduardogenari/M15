@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "70da805b-9b4a-4e6c-8d86-4a8c2a16449d",
-		"name": "M14_DiceGame",
+		"_postman_id": "41550189-fc6e-4104-8163-7ef9fd7e6964",
+		"name": "M15",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -15,7 +15,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\": \"Piero\",\r\n    \"password\":\"notencoded\"\r\n\r\n}",
+					"raw": "{\r\n    \"username\": \"Paul\",\r\n    \"password\":\"bass\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -45,7 +45,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\": \"LuckySeven\",\r\n    \"password\":\"casinodestroyer\"\r\n\r\n}",
+					"raw": "{\r\n    \"username\": \"George\",\r\n    \"password\":\"baseguitar\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -72,7 +72,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\": \"DiceAddict\",\r\n    \"password\": \"1234\"\r\n\r\n}",
+					"raw": "{\r\n    \"username\": \"Jagger\",\r\n    \"password\": \"vocal\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -100,7 +100,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"accountTime\": \"2020-11-10T22:30:00.000+00:00\",\r\n    \"username\": \"\",\r\n    \"password\": \"supersafe\"\r\n\r\n}",
+					"raw": "{\r\n    \"accountTime\": \"2020-11-10T22:30:00.000+00:00\",\r\n    \"username\": \"\",\r\n    \"password\": \"keyboards\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -128,7 +128,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"password\": \"thepassword\"\r\n\r\n}",
+					"raw": "{\r\n    \"password\": \"metals\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -493,6 +493,5 @@
 			},
 			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
