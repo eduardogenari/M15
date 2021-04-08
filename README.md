@@ -1,4 +1,4 @@
-# M15_Dice_Game
+# M15
 API Rest(MySQL + NoSQL + JWT)
 
 Dices game in which one player has associated dice rolls.
